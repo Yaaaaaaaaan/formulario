@@ -10,10 +10,9 @@
         private $ctt_corp;
         private $senha;
         private $rank;
-        private $dataCad;
         private $Matricula;
             public function solicitarCadastro(){
-
+                
             }
             public function novoCadastro(){
                 

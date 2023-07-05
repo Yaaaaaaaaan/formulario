@@ -1,28 +1,41 @@
 
 <?php
 
-abstract class RouteSwitch
-{
-    protected function signin()
-    {
-        require __DIR__ . '/View/signin.php';
+abstract class RouteSwitch{
+    /* Validação de autenticação, para que não abra as telas erroneamente. */
+    protected function vadidaAuth(){
+        session_start();
+        if(!isset($_SESSION['id'])||$_SESSION['id'] =='' || !isset($_SESSION['nome'])||$_SESSION['nome'] ==''){
+            header("Location: /login");
+        }
+    }
+    /* View Index */ 
+    protected function signin(){
+        require __DIR__ . '/View/index/signin.php';
+    }
+    protected function login(){
+        require __DIR__ . '/View/index/login.php';
     }
 
-    protected function login()
-    {
-        require __DIR__ . '/View/login.php';
+    /* View User */
+    protected function register(){
+        require __DIR__ . '/View/user/register.php';
     }
 
-    /*protected function contact()
-    {
-        require __DIR__ . '/View/contact.html';
+    /* View admin */
+    protected function admin(){
+        $this->validaAuth();
+        require __DIR__ . '/View/admin/index.php';
     }
-    
-    protected function __call($name, $arguments)
-    {
+
+    /* Chamada para controller */
+    protected function appController(){
+        require __DIR__ . '/Controller/AppController.php';
+    }
+    public function __call($name, $arguments){
         http_response_code(404);
-        require __DIR__ . '/View/not-found.html';
-    }*/
+        require __DIR__ . '/View/index/404.php';
+    }
 }
 
 ?>

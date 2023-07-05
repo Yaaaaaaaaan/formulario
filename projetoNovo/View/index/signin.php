@@ -10,7 +10,7 @@
         <title>Formulário - Central</title>
     </head>
     <body>
-        <form action="../Controller/AppController.php" method="POST">
+        <form action="/AppController" method="POST">
             <input type="text" name="matr" placeholder="Matricula">
             <input type="text" name="email" placeholder="Email">
             <input type="text" name="ctt" placeholder="Telefone para contato">
@@ -18,11 +18,5 @@
             <button type="submit">Enviar</button>
         </form>
 
-        <form action="../Controller/AppController.php" method="POST">
-            
-            <input type="text" name="email" placeholder="Email">
-            
-            <input type="text" name="acao" value="cadastrarUsuario()" hidden> 
-            <button type="submit">Enviar</button>
     </body>
 </html>
