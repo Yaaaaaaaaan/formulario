@@ -1,19 +1,33 @@
 <?php 
-$function = $_POST['func'];
-        call_user_func($function);
-
+$action = $_POST['acao'];
+$AppController = new AppController;
+$AppController->acao($action);
 
     class AppController{
         var $matr;
         var $email;
         var $ctt;
-        var $a;
-       public function solicitarCadastro(){
+       public function acao(string $action){
+           if($action === 'solicitarCadastro()'){
+                $this -> solicitarCadastro();
+           }else if($action === 'cadastrarUsuario()'){
+                $this -> cadastrarUsuario();
+           }
+
+        }
+        public function solicitarCadastro(){
             $matr = $_POST['matr'];
+            $email = $_POST['email'];
+            $ctt = $_POST['ctt'];
+
+            // Primeira parte já feita. Classe criada e código recebido.
+            
             echo "A matrícula é: ".$matr;
         }
         public function cadastrarUsuario(){
-            $a = $_POST['email'];
+            $email = $_POST['email'];
+
+            echo "O email é: " .$email;
         }
     }
 ?>
