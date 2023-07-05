@@ -1,14 +1,18 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$dbname = "formulario-";
+namespace projetoNovo;
+class Connection{
+    public static function getDb(){
+        try {
+            $conn = new \PDO(
+                "mysql:host=localhost;dbname=Formulario_central;charset=utf8",
+                "root",
+                ""
+            );
+            return $conn;
+        }catch (\PDOException $e){
 
-
-
-// criar a conexao 
-
-
-$conn = mysqli_connect($servidor,$usuario, $senha, $dbname);
+        }
+    }
+}
 
 ?>
