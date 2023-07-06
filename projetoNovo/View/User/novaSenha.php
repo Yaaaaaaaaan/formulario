@@ -8,7 +8,7 @@
         <title>Formulário - Central</title>
     </head>
     <body>
-    <form action="../Controller/AppController.php" method="POST">
+    <form action="/AppController" method="POST">
             <input type="text" name="nick" placeholder="Nome de usuário" required>
             <input type="text" name="email" placeholder="Insira seu email" required>
             <input type="text" name="acao" value="novaSenha()" hidden> 
