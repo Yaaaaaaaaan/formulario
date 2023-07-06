@@ -1,4 +1,4 @@
-<form action="/AppController.php" method="POST">
+<form action="../Controller/AppController.php" method="POST">
             
             <input type="text" name="email" placeholder="Email">
             <input type="email" name="email" placeholder="Email" required>

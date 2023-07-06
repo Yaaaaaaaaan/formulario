@@ -8,12 +8,11 @@
         <title>Formulário - Central</title>
     </head>
     <body>
-    <form action="/AppController" method="POST">
+    <form action="../Controller/AppController.php" method="POST">
             <input type="text" name="nick" placeholder="Nome de usuário" required>
-            <input type="password" name="senha" placeholder="Senha" required>
-            <input type="text" name="acao" value="autenticar()" hidden> 
-            <a href="../novaSenha">Esqueceu a senha?</a>
-            <button type="submit">Entrar</button>
+            <input type="text" name="email" placeholder="Insira seu email" required>
+            <input type="text" name="acao" value="novaSenha()" hidden> 
+            <button type="submit">Solicitar alteração de senha</button>
         </form> 
     </body>
 </html>
