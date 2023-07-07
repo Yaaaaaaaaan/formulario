@@ -11,39 +11,39 @@ abstract class RouteSwitch{
     }
     /* View Index */ 
     protected function signin(){
-        require __DIR__ . '/View/Index/signin.php';
+        require __DIR__ . '/Views/Index/signin.php';
     }
     protected function login(){
-        require __DIR__ . '/View/Index/login.php';
+        require __DIR__ . '/Views/Index/login.php';
     }
     protected function novaSenha(){
-        require __DIR__ . '/View/User/novaSenha.php';
+        require __DIR__ . '/Views/User/novaSenha.php';
     }
 
     /* View User */
     protected function register(){
-        require __DIR__ . '/View/User/register.php';
+        require __DIR__ . '/Views/User/register.php';
     }
 
     /* View admin */
     protected function housekeeping(){
         //$this->validaAuth();
-        require __DIR__ . '/View/Admin/index.php';
+        require __DIR__ . '/Views/Admin/index.php';
     }
 
     /* View Usuário */
     protected function inicial(){
         //$this->validaAuth();
-        require __DIR__ . '/View/Formulario/index.php';
+        require __DIR__ . '/Views/Formulario/index.php';
     }
 
     /* Chamada para controller */
     protected function appController(){
-        require __DIR__ . '/Controller/AppController.php';
+        require __DIR__ . '/Controllers/AppController.php';
     }
     public function __call($name, $arguments){
         http_response_code(404);
-        require __DIR__ . '/View/index/404.php';
+        require __DIR__ . '/Views/index/404.php';
     }
 }
 

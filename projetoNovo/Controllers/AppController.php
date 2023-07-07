@@ -1,7 +1,10 @@
-<?php 
-$action = $_POST['acao'];
-$AppController = new AppController;
-$AppController->acao($action);
+<?php
+	namespace projetoNovo\Controllers;
+    use projetoNovo\Model\Container;
+
+    $acao = $_POST['acao'];
+    $AppController = new AppController;
+    $AppController->acao($acao);
 
     class AppController{
         var $matr;
@@ -9,16 +12,16 @@ $AppController->acao($action);
         var $ctt;
         var $nick;
         //onde se faz o direcionamento das requisições dos formulários
-       public function acao(string $action){
-           if($action === 'solicitarCadastro()'){
+       public function acao(string $acao){
+           if($acao === 'solicitarCadastro()'){
                 $this -> solicitarCadastro();
-           }else if($action === 'cadastrarUsuario()'){
+           }else if($acao === 'cadastrarUsuario()'){
                 $this -> cadastrarUsuario();
-           }else if($action=== 'autenticar()'){
+           }else if($acao=== 'autenticar()'){
                 $this -> autenticar();
-           }else if($action=== 'sair()'){
+           }else if($acao=== 'sair()'){
             $this -> sair();
-           }else if($action=== 'novaSenha()'){
+           }else if($acao=== 'novaSenha()'){
             $this -> novaSenha();
            }
 
@@ -30,8 +33,11 @@ $AppController->acao($action);
             $ctt = $_POST['ctt'];
 
             // Primeira parte já feita. Classe criada e código recebido.
-            
-            echo "A matrícula é: ".$matr;
+            $usuario = Container::getModel('Usuario');
+            $usuario->__set('matr',$_POST['matr']);
+            $usuario->__set('email',$_POST['email']);
+            $usuario->__set('ctt',$_POST['ctt']);
+            header('location: /login');
         }
         //cadastro do usuário, após aprovação do admin
         public function cadastrarUsuario(){

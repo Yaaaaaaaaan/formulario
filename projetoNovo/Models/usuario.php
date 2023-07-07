@@ -1,8 +1,8 @@
 <?php
-    namespace projetoNovo\Model;
-    use projetoNovo\Model;
+    namespace projetoNovo\Models;
+    use projetoNovo\Model\Model;
     class Usuario extends Model{
-        private $matricula;
+        private $matr;
         private $email;
         private $ctt;
         private $id;
@@ -12,7 +12,6 @@
         private $ctt_corp;
         private $senha;
         private $rank;
-        private $Matricula;
             public function __get($atributo){
                 return $this->$atributo;
             }
@@ -20,12 +19,14 @@
                 $this->$atributo=$valor;
             }
             public function solicitarCadastro(){
-                $query = "";
+                $query = "INSERT INTO valida_usuario (matricula,email,ctt) VALUES (:matr, :email, :ctt);";
                 $stmt = $this->db->prepare($query);
                 //O primeiro campo abaixo é sobre o dado no banco, o segundo é sobre o dado recebido do controller
-                $stmt ->bindValue(':matricula', $this->__get("matr")); 
+                $stmt ->bindValue(':matr', $this->__get("matr")); 
                 $stmt ->bindValue(':email', $this->__get("email")); 
                 $stmt ->bindValue(':ctt', $this->__get("ctt")); 
+                $stmt->execute();
+                return $this;
             }
             public function novoCadastro(){
                 
