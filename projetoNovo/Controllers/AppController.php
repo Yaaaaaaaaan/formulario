@@ -33,6 +33,7 @@
             $ctt = $_POST['ctt'];
 
             // Primeira parte já feita. Classe criada e código recebido.
+            //tá retornando erro, analisar com mais calma o que pode ser...
             $usuario = Container::getModel('Usuario');
             $usuario->__set('matr',$_POST['matr']);
             $usuario->__set('email',$_POST['email']);
