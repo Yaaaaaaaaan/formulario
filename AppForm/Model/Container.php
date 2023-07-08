@@ -1,6 +1,6 @@
 <?php
-	namespace projetoNovo\Model;
-	use projetoNovo\Connection;
+	namespace Model;
+	use ProjetoNovo\Connection;
 	class Container{
 		public static function getModel($model){
 			$class = "\\projetoNovo\\Models\\".ucfirst($model);

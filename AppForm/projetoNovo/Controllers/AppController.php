@@ -1,6 +1,7 @@
 <?php
 	namespace projetoNovo\Controllers;
-    use projetoNovo\Model\Container;
+    use Model\Container;
+    
 
     $acao = $_POST['acao'];
     $AppController = new AppController;
