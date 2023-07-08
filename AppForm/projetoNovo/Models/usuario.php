@@ -1,5 +1,5 @@
 <?php
-    namespace projetoNovo\Models;
+    namespace projetoNovo\Models\Usuario;
     use projetoNovo\Model\Model;
     class Usuario extends Model{
         private $matr;

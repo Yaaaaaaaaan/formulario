@@ -1,5 +1,5 @@
 <?php
-	namespace projetoNovo\Model;
+	namespace teste\Model;
 	class Model{
 		protected $db;
 

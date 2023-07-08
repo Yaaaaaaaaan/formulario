@@ -40,6 +40,8 @@ abstract class RouteSwitch{
     /* Chamada para controller */
     protected function appController(){
         require __DIR__ . '/Controllers/AppController.php';
+        require __DIR__. '/Model/Model.php';
+        require __DIR__. '/Model/Container.php';
     }
     public function __call($name, $arguments){
         http_response_code(404);
