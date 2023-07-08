@@ -1,6 +1,6 @@
 <?php
-    namespace projetoNovo\Models\Usuario;
-    use projetoNovo\Model\Model;
+    namespace Models\Usuario;
+    use Model\Model;
     class Usuario extends Model{
         private $matr;
         private $email;

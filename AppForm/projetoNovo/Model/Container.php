@@ -1,5 +1,5 @@
 <?php
-	namespace projetoNovo\Model\Container;
+	namespace Model\Container;
 	use ProjetoNovo\Connection;
 	class Container{
 		public static function getModel($model){

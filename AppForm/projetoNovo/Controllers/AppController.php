@@ -1,6 +1,6 @@
 <?php
-	namespace projetoNovo\Controllers\AppCotroller;
-    use projetoNovo\Model\Container;
+	namespace Controllers\AppCotroller;
+    use Model\Container;
     
 
     
