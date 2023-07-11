@@ -1,1 +1,6 @@
 Saudações meu nobre, iniciei a abstração das classes e criação das funções, porém não cheguei a elaborar as conexões. Estou muito cansado, e vou tirar uma soneca, mais tarde se der tempo, retorno para ajudá-lo.
+
+
+O que se pode fazer na questão das rotas??
+
+Bom, pode-se criar arrays e seus valores serão de funções nas classes para que assim não haja limitação na requisição, além de configurar o appController em cada rota separadamente.

@@ -1,12 +1,14 @@
-
 <?php
-
 abstract class RouteSwitch{
     /* Validação de autenticação, para que não abra as telas erroneamente. */
     public function vadidaAuth(){
         session_start();
         if(!isset($_SESSION['id'])||$_SESSION['id'] =='' || !isset($_SESSION['nome'])||$_SESSION['nome'] ==''){
             header("Location: /login");
+        }else if($_SESSION['rank']=='1'){
+            $this->housekeeping();
+        }else{
+            $this->inicial();
         }
     }
     /* View Index */ 
