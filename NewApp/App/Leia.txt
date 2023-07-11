@@ -1,0 +1,1 @@
+Saudações meu nobre, iniciei a abstração das classes e criação das funções, porém não cheguei a elaborar as conexões. Estou muito cansado, e vou tirar uma soneca, mais tarde se der tempo, retorno para ajudá-lo.
